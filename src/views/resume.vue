@@ -3,29 +3,41 @@
     <v-touch class="resume" @swipedown="swipedown" @swipeup="swipeup">
       <div class="nav">
         <template v-for="(item, index) in this.$router.options.routes">
-          <router-link :to="item.path" :key="index" exact><li></li></router-link>
+          <router-link :to="item.path" :key="index" exact><i class="iconfont icon-dian nav-item"></i></router-link>
         </template>
       </div>
       <div class="page">
         <transition
           mode="out-in"
-          :duration="{ enter: 2500, leave: 1500 }"
-          leave-active-class="animated bounceOutRight"
-          enter-active-class="animated tada">
+          :duration="{ enter: animateOptions.enterTime, leave: animateOptions.leaveTime }"
+          :leave-active-class="'animated ' + animateOptions.leave"
+          :enter-active-class="'animated ' + animateOptions.enter">
           <router-view />
         </transition>
+      </div>
+      <div class="next">
+        <!-- <Down :show="showArrow"/> -->
+        <Down />
       </div>
     </v-touch>
   </div>
 </template>
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
+import Down from '../components/down'
 export default {
   // .
+  components: {
+    Down
+  },
   data () {
     return {
       lastScroll: 0
+      // showArrow: true
     }
+  },
+  computed: {
+    ...mapState(['animateOptions'])
   },
   methods: {
     ...mapActions(['next', 'last']),
@@ -33,11 +45,11 @@ export default {
       // 防止用户短时间内滚动多次，设置滚动间隔大于一秒才能生效
       // 判断滚动间隔时间
       let scrollDuration = event.timeStamp - this.lastScroll
-      console.log(scrollDuration)
+      // console.log(scrollDuration)
       if (scrollDuration > 1000) {
         // 将这一次的滚动时间记录为上一次合法的滚动时间
         this.lastScroll = event.timeStamp
-        console.log('合法的滚动')
+        // console.log('合法的滚动')
         // 判断滚动方向进行操作
         if (event.deltaY > 0) {
           const presentPath = this.$route.path
@@ -56,7 +68,7 @@ export default {
       }
     },
     swipedown () {
-      console.log('down')
+      // console.log('down')
       const presentPath = this.$route.path
       this.next(presentPath).then(nextPagePath => {
         this.$router.push(nextPagePath)
@@ -72,8 +84,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+@import '../common/main.less';
 .active {
-  color: white;
+  color: @fontColor;
   font-size: 1.1rem;
 }
 .resume {
@@ -81,14 +94,25 @@ export default {
   .nav {
     position: fixed;
     right: 10px;
-    top: 50%;
+    top: 45%;
+    z-index: 100;
+    .nav-item {
+      display: block;
+      font-size: 11px;
+      padding: 3px 0;
+    }
   }
   .page {
-    background-color: rgba(109, 172, 201, .5);
+    background-color: @mainColor;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .next {
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
   }
 }
 </style>

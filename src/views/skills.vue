@@ -1,10 +1,8 @@
 <template>
-  <div class="page">skills</div>
+  <div class="page section">skills</div>
 </template>
 <style lang="less" scoped>
-.page {
-  width: 100vw;
-  height: 100vh;
-  background-color: tan;
+.section {
+  background-color: rgb(56, 19, 59) !important;
 }
 </style>
