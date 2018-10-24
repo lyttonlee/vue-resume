@@ -7,23 +7,18 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     routes: router.options.routes,
-    nextPagePath: '',
-    lastPagePath: '',
-    animateOptions: {
-      leave: 'fadeOutDown',
-      enter: 'fadeInDown',
-      leaveTime: 1500,
-      enterTime: 1500
-    },
+    // nextPagePath: '',
+    // lastPagePath: '',
+    animateOptions: {},
     showArrow: true
   },
   mutations: {
-    nextPage (state, data) {
-      state.nextPagePath = data
-    },
-    lastPage (state, data) {
-      state.lastPagePath = data
-    },
+    // nextPage (state, data) {
+    //   state.nextPagePath = data
+    // },
+    // lastPage (state, data) {
+    //   state.lastPagePath = data
+    // },
     changeAnimateDirection (state, data) {
       state.animateOptions = data
     },
@@ -46,7 +41,7 @@ export default new Vuex.Store({
           // console.log(router)
           // router.push(nextPagePath)
         }
-        console.log(nextPagePath)
+        // console.log(nextPagePath)
         const animateDirection = {
           leave: 'fadeOutDown',
           enter: 'fadeInDown',
@@ -54,7 +49,7 @@ export default new Vuex.Store({
           enterTime: 1500
         }
         commit('changeAnimateDirection', animateDirection)
-        commit('nextPage', nextPagePath)
+        // commit('nextPage', nextPagePath)
         commit('changeShowArrow')
         resolve(nextPagePath)
         setTimeout(() => {
@@ -83,13 +78,26 @@ export default new Vuex.Store({
           enterTime: 1500
         }
         commit('changeAnimateDirection', animateDirection)
-        commit('lastPage', lastPagePath)
+        // commit('lastPage', lastPagePath)
         commit('changeShowArrow')
         resolve(lastPagePath)
         setTimeout(() => {
           commit('changeShowArrow')
         }, state.animateOptions.leaveTime + state.animateOptions.enterTime)
       })
+    },
+    clickRouteChange ({ commit, state }) {
+      const animateDirection = {
+        leave: 'zoomOut',
+        enter: 'zoomIn',
+        leaveTime: 1500,
+        enterTime: 1500
+      }
+      commit('changeAnimateDirection', animateDirection)
+      commit('changeShowArrow')
+      setTimeout(() => {
+        commit('changeShowArrow')
+      }, state.animateOptions.leaveTime + state.animateOptions.enterTime)
     }
   }
 })

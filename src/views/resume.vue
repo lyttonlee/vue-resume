@@ -3,7 +3,7 @@
     <v-touch class="resume" @swipedown="swipedown" @swipeup="swipeup">
       <div class="nav">
         <template v-for="(item, index) in this.$router.options.routes">
-          <router-link :to="item.path" :key="index" exact><i class="iconfont icon-dian nav-item"></i></router-link>
+          <router-link :to="item.path" :key="index" exact><i @click="changeAnimation" class="iconfont icon-dian nav-item"></i></router-link>
         </template>
       </div>
       <div class="page">
@@ -40,7 +40,10 @@ export default {
     ...mapState(['animateOptions'])
   },
   methods: {
-    ...mapActions(['next', 'last']),
+    ...mapActions(['next', 'last', 'clickRouteChange']),
+    changeAnimation () {
+      this.clickRouteChange()
+    },
     mouseWheel (event) {
       // 防止用户短时间内滚动多次，设置滚动间隔大于一秒才能生效
       // 判断滚动间隔时间
@@ -105,9 +108,6 @@ export default {
   .page {
     background-color: @mainColor;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .next {
     position: fixed;

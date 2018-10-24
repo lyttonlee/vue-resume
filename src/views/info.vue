@@ -1,5 +1,11 @@
 <template>
-  <div class="page section">info</div>
+  <div class="page-item section">
+    <h2>info</h2>
+    <p>dskjladhsajkdh</p>
+    <div>
+      <p>daksjdhaksh</p>
+    </div>
+  </div>
 </template>
 <style lang="less" scoped>
 .section {

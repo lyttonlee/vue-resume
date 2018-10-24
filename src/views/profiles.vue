@@ -1,5 +1,5 @@
 <template>
-  <div class="page section">profile</div>
+  <div class="page-item section">profile</div>
 </template>
 <style lang="less" scoped>
 .section {
