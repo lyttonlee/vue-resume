@@ -10,7 +10,40 @@ export default new Vuex.Store({
     // nextPagePath: '',
     // lastPagePath: '',
     animateOptions: {},
-    showArrow: true
+    showArrow: true,
+    info: {
+      name: '思吾谓何思',
+      avatar: 'https://img5.duitang.com/uploads/item/201411/24/20141124220354_RV4U4.jpeg',
+      introduce: '博学之,审问之,慎思之,明辨之,笃行之',
+      status: [
+        {
+          icon: 'icon-icon-',
+          value: '四川'
+        },
+        {
+          icon: 'icon-xueli',
+          value: '本科'
+        },
+        {
+          icon: 'icon-nianling',
+          value: '32'
+        },
+        {
+          icon: 'icon-zhiwei',
+          value: '离职'
+        }
+      ]
+    },
+    skills: [
+      {
+        attr: 'Vue',
+        value: 90
+      },
+      {
+        attr: 'React',
+        value: 70
+      }
+    ]
   },
   mutations: {
     // nextPage (state, data) {

@@ -2,26 +2,55 @@
   <div class="page-item section">
     <h2>基本信息</h2>
     <mu-avatar size=80>
-      <img src="../assets/logo.png">
+      <img :src="info.avatar">
     </mu-avatar>
-    <h3>博学之,审问之,慎思之,明辨之,笃行之</h3>
-    <div>
-      <mu-paper class="paper" circle :z-depth="4">
-        <i class="iconfont icon-dian"></i>
-      </mu-paper>
-      <mu-paper class="paper" circle :z-depth="4">
-        <i class="iconfont icon-dian"></i>
-      </mu-paper>
-    </div>
+    <h4>{{info.name}}</h4>
+    <h3>{{info.introduce}}</h3>
+    <mu-container class="papers">
+      <template v-for="(item, index) in info.status">
+        <mu-paper :key="index" class="paper" circle :z-depth="4">
+          <i :class="`iconfont ${item.icon}`"></i>
+          <div class="title">{{item.value}}</div>
+        </mu-paper>
+      </template>
+    </mu-container>
   </div>
 </template>
+<script>
+import {
+  mapState
+} from 'vuex'
+export default {
+  // ..
+  computed: {
+    ...mapState(['info'])
+  }
+}
+</script>
+
 <style lang="less" scoped>
 .section {
   background-color: rgb(20, 73, 73) !important;
-  .paper {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(16, 68, 180, 0.363);
+  .papers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .paper {
+      margin: 30px 20px;
+      width: 50px;
+      height: 50px;
+      color: rgb(192, 200, 207);
+      background-color: rgba(97, 136, 207, 0.363);
+      .iconfont {
+        height: 50px;
+        line-height: 50px;
+        font-size: 30px;
+      }
+      .title {
+        font-size: .9rem;
+        margin: 5px 0;
+      }
+    }
   }
 }
 </style>
