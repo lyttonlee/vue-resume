@@ -1,37 +1,59 @@
 <template>
   <div class="page-item section">
-    <h2>技术栈</h2>
-    <mu-container>
-      <template v-for="(item, index) in this.skills">
-        <mu-chip :key="index" color="#009688">
-          {{item.attr}}
-        </mu-chip>
-      </template>
+    <h2>skill</h2>
+    <mu-container class="container">
+      <transition-group name="flip-list" tag="div">
+        <!-- <template> -->
+          <mu-chip v-for="(item, index) in skills" class="chip" :key="index" color="#b0bec5" text-color="rgb(56, 19, 59)">
+            {{item}}
+          </mu-chip>
+        <!-- </template> -->
+      </transition-group>
+      <!-- <button @click="shuffleSk">shuffle</button> -->
     </mu-container>
   </div>
 </template>
 <script>
+// import shuffle from 'shuffle-array'
 import {
-  mapState
+  mapState,
+  mapActions
 } from 'vuex'
 export default {
   data () {
     return {
-      initVal: 0
+      // skills: ['vue', 'react', 'js', 'html', 'css', 'node']
     }
   },
   computed: {
     ...mapState(['skills'])
+  },
+  methods: {
+    ...mapActions(['shuffleSkills'])
+  },
+  mounted () {
+    this.time = setInterval(() => {
+      this.shuffleSkills()
+    }, 5000)
+  },
+  beforeDestroy () {
+    console.log('clear')
+    clearInterval(this.time)
   }
 }
 </script>
 
 <style lang="less" scoped>
+.flip-list-move {
+  transition: transform 2s;
+}
 .section {
   background-color: rgb(56, 19, 59) !important;
-  .st {
-    word-break: break-all;
-    padding: 0 30px;
+  .container {
+    width: 80%;
+    .chip {
+      margin: 10px;
+    }
   }
 }
 </style>

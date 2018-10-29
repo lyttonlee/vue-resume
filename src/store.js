@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import router from './router'
+import shuffle from 'shuffle-array'
 
 Vue.use(Vuex)
 
@@ -34,16 +35,7 @@ export default new Vuex.Store({
         }
       ]
     },
-    skills: [
-      {
-        attr: 'Vue',
-        value: 90
-      },
-      {
-        attr: 'React',
-        value: 70
-      }
-    ]
+    skills: ['Vue', 'Vue-Router', 'Vuex', 'React', 'React-Native', 'Redux', 'NodeJs', 'JavaScript', 'MongoDB', 'Html5', 'Css3', 'Koa2', 'mongoose', 'ubuntu', 'Webpack', 'electron']
   },
   mutations: {
     // nextPage (state, data) {
@@ -57,6 +49,9 @@ export default new Vuex.Store({
     },
     changeShowArrow (state) {
       state.showArrow = !state.showArrow
+    },
+    changeSkillsList (state, data) {
+      state.skills = data
     }
   },
   actions: {
@@ -131,6 +126,11 @@ export default new Vuex.Store({
       setTimeout(() => {
         commit('changeShowArrow')
       }, state.animateOptions.leaveTime + state.animateOptions.enterTime)
+    },
+    shuffleSkills ({ commit, state }) {
+      const newSkills = shuffle(state.skills, { 'copy': true })
+      // console.log(newSkills === state.skills)
+      commit('changeSkillsList', newSkills)
     }
   }
 })
