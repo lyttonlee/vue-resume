@@ -23,6 +23,16 @@ export default new Router({
       path: '/profiles',
       name: 'Profiles',
       component: () => import('./views/profiles.vue')
+    },
+    {
+      path: '/career',
+      name: 'Career',
+      component: () => import('./views/career.vue')
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: () => import('./views/contact.vue')
     }
   ]
 })

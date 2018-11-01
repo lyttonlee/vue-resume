@@ -3,47 +3,22 @@ import Vuex from 'vuex'
 import router from './router'
 import shuffle from 'shuffle-array'
 
+import { info, skills, profiles, career, contact } from './data/data'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     routes: router.options.routes,
-    // nextPagePath: '',
-    // lastPagePath: '',
     animateOptions: {},
     showArrow: true,
-    info: {
-      name: '思吾谓何思',
-      avatar: 'https://img5.duitang.com/uploads/item/201411/24/20141124220354_RV4U4.jpeg',
-      introduce: '博学之,审问之,慎思之,明辨之,笃行之',
-      status: [
-        {
-          icon: 'icon-icon-',
-          value: '四川'
-        },
-        {
-          icon: 'icon-xueli',
-          value: '本科'
-        },
-        {
-          icon: 'icon-nianling',
-          value: '32'
-        },
-        {
-          icon: 'icon-zhiwei',
-          value: '离职'
-        }
-      ]
-    },
-    skills: ['Vue', 'Vue-Router', 'Vuex', 'React', 'React-Native', 'Redux', 'NodeJs', 'JavaScript', 'MongoDB', 'Html5', 'Css3', 'Koa2', 'mongoose', 'ubuntu', 'Webpack', 'electron']
+    info,
+    skills,
+    profiles,
+    career,
+    contact
   },
   mutations: {
-    // nextPage (state, data) {
-    //   state.nextPagePath = data
-    // },
-    // lastPage (state, data) {
-    //   state.lastPagePath = data
-    // },
     changeAnimateDirection (state, data) {
       state.animateOptions = data
     },
@@ -72,7 +47,7 @@ export default new Vuex.Store({
         // console.log(nextPagePath)
         const animateDirection = {
           leave: 'fadeOutDown',
-          enter: 'fadeInDown',
+          enter: 'fadeInUp',
           leaveTime: 1500,
           enterTime: 1500
         }
@@ -101,7 +76,7 @@ export default new Vuex.Store({
         // console.log(lastPagePath)
         const animateDirection = {
           leave: 'fadeOutUp',
-          enter: 'fadeInUp',
+          enter: 'fadeInDown',
           leaveTime: 1500,
           enterTime: 1500
         }

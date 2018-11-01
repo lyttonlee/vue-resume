@@ -14,7 +14,7 @@ export default {
 
 <style lang="less">
 #app {
-  font-family:  Helvetica,sans-serif, 'Avenir', Helvetica, Arial;
+  font-family: Helvetica,sans-serif, 'Avenir', Helvetica, Arial",Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

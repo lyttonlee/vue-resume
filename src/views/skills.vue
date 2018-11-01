@@ -1,15 +1,12 @@
 <template>
   <div class="page-item section">
-    <h2>skill</h2>
+    <h2>Skills</h2>
     <mu-container class="container">
       <transition-group name="flip-list" tag="div">
-        <!-- <template> -->
-          <mu-chip v-for="(item, index) in skills" class="chip" :key="index" color="#b0bec5" text-color="rgb(56, 19, 59)">
-            {{item}}
-          </mu-chip>
-        <!-- </template> -->
+        <mu-chip v-for="(item, index) in skills" class="chip" :key="index"      color="#b0bec5" text-color="rgb(56, 19, 59)">
+          {{item}}
+        </mu-chip>
       </transition-group>
-      <!-- <button @click="shuffleSk">shuffle</button> -->
     </mu-container>
   </div>
 </template>

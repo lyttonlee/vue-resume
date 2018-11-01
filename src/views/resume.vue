@@ -108,6 +108,7 @@ export default {
   .page {
     background-color: @mainColor;
     height: 100vh;
+    overflow: hidden;
   }
   .next {
     position: fixed;

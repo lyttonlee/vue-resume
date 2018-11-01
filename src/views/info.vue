@@ -1,6 +1,6 @@
 <template>
   <div class="page-item section">
-    <h2>基本信息</h2>
+    <h2>Info</h2>
     <mu-avatar size=80>
       <img :src="info.avatar">
     </mu-avatar>
