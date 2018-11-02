@@ -53,8 +53,8 @@ export const career = [
   }
 ]
 export const contact = {
-  experience: '',
-  evaluation: '',
+  experience: '并无互联网行业实际工作经验，但写过多个Demo以及开发过自己喜欢的应用后对前后端分离、模块化、组件化、代码层次等的重要性有一定理解！',
+  evaluation: '高效的自学能力,具备独立分析解决问题能力强烈的自我驱动力,知识社区依耐者',
   hobby: [],
   email: 'lzr3278@163.com',
   tel: '15181589155',
