@@ -21,7 +21,7 @@ export const info = {
     }
   ]
 }
-export const skills = ['Vue', 'Vue-Router', 'Vuex', 'React', 'React-Native', 'Redux', 'NodeJs', 'JavaScript', 'MongoDB', 'Html5', 'Css3', 'Koa2', 'mongoose', 'Ubuntu', 'Webpack', 'electron', 'Linux', 'ES6', 'React-Router', 'express', 'axios', 'git', 'Github']
+export const skills = ['Vue', 'Vue-Router', 'Vuex', 'React', 'React-Native', 'Redux', 'NodeJs', 'JavaScript', 'MongoDB', 'Html5', 'Css3', 'Koa2', 'mongoose', 'Ubuntu', 'Webpack', 'electron', 'Linux', 'React-Router', 'express', 'git']
 export const profiles = [
   {
     title: 'learn-vue',

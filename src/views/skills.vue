@@ -3,7 +3,7 @@
     <h2>Skills</h2>
     <mu-container class="container">
       <transition-group name="flip-list" tag="div">
-        <mu-chip v-for="(item, index) in skills" class="chip" :key="index"      color="#b0bec5" text-color="rgb(56, 19, 59)">
+        <mu-chip v-for="(item, index) in skills" class="chip" :key="index" color="#b0bec5" text-color="rgb(56, 19, 59)">
           {{item}}
         </mu-chip>
       </transition-group>

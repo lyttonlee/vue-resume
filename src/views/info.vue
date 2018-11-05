@@ -36,7 +36,7 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
     .paper {
-      margin: 30px 20px;
+      margin: 15px;
       width: 50px;
       height: 50px;
       color: rgb(192, 200, 207);

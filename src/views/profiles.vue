@@ -7,9 +7,9 @@
           <mu-container class="box">
             <mu-card class="card" style="width: 100%; margin: 0 auto;">
               <mu-card-header :title="profile.title" :sub-title="profile.subTitle" />
-              <mu-card-media class="img">
+              <!-- <mu-card-media class="img">
                 <img src="../assets/design.jpg">
-              </mu-card-media>
+              </mu-card-media> -->
               <mu-card-title :sub-title="'技术栈：' + profile.skills"></mu-card-title>
               <mu-card-text>
                 {{profile.text}}
