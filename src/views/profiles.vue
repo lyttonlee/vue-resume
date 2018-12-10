@@ -57,7 +57,16 @@ export default {
         width: 85%;
         .card {
           background: rgba(126, 123, 94, 0.664);
+          border-radius: 10px;
+          .mu-card-header {
+            padding-bottom: 0;
+          }
+          .mu-card-header-title {
+            padding: 0;
+            width: 100%;
+          }
           .mu-card-title {
+            width: 100%;
             color: rgb(0, 0, 0);
             font-size: 1.3rem;
             text-align: left;

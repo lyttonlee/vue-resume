@@ -8,6 +8,7 @@ import VueTouch from 'vue-touch'
 import 'normalize.css'
 import 'animate.css'
 import 'muse-ui/dist/muse-ui.css'
+import './common/icons.css'
 import './common/style.css'
 import './registerServiceWorker'
 

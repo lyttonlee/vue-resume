@@ -12,8 +12,8 @@ export const info = {
       value: '本科'
     },
     {
-      icon: 'icon-nianling',
-      value: '32'
+      icon: 'icon-hunyindengji1',
+      value: '未婚'
     },
     {
       icon: 'icon-zhiwei',
@@ -49,14 +49,31 @@ export const career = [
   },
   {
     time: '2017-至今',
-    text: '学习了较多的互联网及编程知识，有过合伙创业的想法并付诸实践，知识终因经验不足及众多问题而停止'
+    text: '一直在学习互联网及编程知识，有过合伙创业的想法并付诸实践，终因经验不足及众多问题而停止'
   }
 ]
 export const contact = {
   experience: '并无互联网行业实际工作经验，但写过多个Demo以及开发过自己喜欢的应用后对前后端分离、模块化、组件化、代码层次等的重要性有一定理解！',
   evaluation: '高效的自学能力,具备独立分析解决问题能力强烈的自我驱动力,知识社区依耐者',
-  hobby: [],
+  // hobby: [],
   email: 'lzr3278@163.com',
   tel: '15181589155',
-  contacts: []
+  socials: [
+    {
+      url: 'https://github.com/lyttonlee',
+      icon: 'icon-GitHub'
+    },
+    {
+      url: 'https://segmentfault.com/u/siwuweihesi',
+      icon: 'icon-sf'
+    },
+    {
+      url: 'https://www.zhihu.com/people/li-zai-rong-27/activities',
+      icon: 'icon-zhihu'
+    },
+    {
+      url: 'https://blog.csdn.net/weixin_43760383',
+      icon: 'icon-csdn'
+    }
+  ]
 }

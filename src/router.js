@@ -5,7 +5,7 @@ Vue.use(Router)
 // const LazyLoadComponent = componentName => () => import(`./views/${componentName}`)
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: process.env.BASE_URL || '',
   linkActiveClass: 'active',
   routes: [
     {

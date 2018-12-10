@@ -19,17 +19,21 @@ export default new Vuex.Store({
     contact
   },
   mutations: {
+    // 改变切换路由页面的过度动画
     changeAnimateDirection (state, data) {
       state.animateOptions = data
     },
+    // 控制是否显示下一页的箭头
     changeShowArrow (state) {
       state.showArrow = !state.showArrow
     },
+    // 重排序 skills[]
     changeSkillsList (state, data) {
       state.skills = data
     }
   },
   actions: {
+    // 下一页  =====> 鼠标滚轮向下滚动 或 向下滑动（移动端）
     next ({ commit, state }, presentPath) {
       return new Promise(resolve => {
         // console.log(presentPath)
@@ -47,7 +51,7 @@ export default new Vuex.Store({
         // console.log(nextPagePath)
         const animateDirection = {
           leave: 'fadeOutDown',
-          enter: 'fadeInUp',
+          enter: 'fadeInDown',
           leaveTime: 1500,
           enterTime: 1500
         }
@@ -60,6 +64,7 @@ export default new Vuex.Store({
         }, state.animateOptions.leaveTime + state.animateOptions.enterTime)
       })
     },
+    // 上一页 鼠标滚轮向上滚动 或 向上滑动（移动端）
     last ({ commit, state }, presentPath) {
       return new Promise(resolve => {
         // console.log(presentPath)
@@ -76,7 +81,7 @@ export default new Vuex.Store({
         // console.log(lastPagePath)
         const animateDirection = {
           leave: 'fadeOutUp',
-          enter: 'fadeInDown',
+          enter: 'fadeInUp',
           leaveTime: 1500,
           enterTime: 1500
         }
@@ -89,6 +94,7 @@ export default new Vuex.Store({
         }, state.animateOptions.leaveTime + state.animateOptions.enterTime)
       })
     },
+    // 点击小圆点切换页面
     clickRouteChange ({ commit, state }) {
       const animateDirection = {
         leave: 'zoomOut',
@@ -102,6 +108,7 @@ export default new Vuex.Store({
         commit('changeShowArrow')
       }, state.animateOptions.leaveTime + state.animateOptions.enterTime)
     },
+    // 重排序技能页面的 skills[]
     shuffleSkills ({ commit, state }) {
       const newSkills = shuffle(state.skills, { 'copy': true })
       // console.log(newSkills === state.skills)
