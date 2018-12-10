@@ -53,6 +53,7 @@ export default {
     text-align: left;
     h3 {
       // text-align: center;
+      margin-top: 0;
     }
     .socials {
       .box {
@@ -62,14 +63,14 @@ export default {
         align-items: center;
         .socials-item {
           display: block;
-          height: 60px;
-          width: 60px;
+          height: 40px;
+          width: 40px;
           background: rgba(11, 5, 48, 0.3);
-          border-radius: 30px;
+          border-radius: 20px;
           text-align: center;
           .icon {
-            font-size: 2rem;
-            line-height: 60px;
+            font-size: 1.5rem;
+            line-height: 40px;
             color: rgb(162, 165, 168);
           }
         }
@@ -79,18 +80,18 @@ export default {
       .btn {
         margin: 0 auto;
         display: block;
-        height: 40px;
+        height: 30px;
         width: 85%;
         background: rgba(11, 5, 48, 0.3);
-        border-radius: 20px;
-        font-size: 1.3rem;
-        line-height: 40px;
+        border-radius: 15px;
+        font-size: 1.1rem;
+        line-height: 30px;
         color: rgb(148, 154, 161);
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         text-align: left;
         text-indent: 1rem;
         .icon {
-          font-size: 1.3rem;
+          font-size: 1.1rem;
           color: rgb(210, 213, 216);
           padding: 0 10px;
         }
