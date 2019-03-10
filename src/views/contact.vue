@@ -3,8 +3,11 @@
     <h2>Contact</h2>
     <div class="contact">
       <div class="experience">
-        <h3>Experience</h3>
-        {{contact.experience}}
+        <h3>Experiences</h3>
+        <template v-for="(item, index) in contact.experiences">
+          <p class="p-item" :key="index">{{item}}</p>
+        </template>
+        <!-- {{contact.experience}} -->
       </div>
       <div class="evaluation">
         <h3>Evaluation</h3>
@@ -54,6 +57,11 @@ export default {
     h3 {
       // text-align: center;
       margin-top: 0;
+    }
+    .experience {
+      .p-item {
+        margin: 5px 0;
+      }
     }
     .socials {
       .box {

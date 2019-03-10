@@ -79,6 +79,13 @@ export const profiles = [
     skills: 'react-native redux React-Navgation ',
     text: '主要学会了使用react-native的基本组件，react-navigation的使用，对react-native的基本环境搭建及运行有了基础理解',
     github: 'https://github.com/lyttonlee/react-demo'
+  },
+  {
+    title: '原生JS实现五子棋',
+    subTitle: '简单的canvas实现五子棋',
+    skills: 'JavaScript',
+    text: '了解了canvas的基本使用,对DOM对象的操作有了进一步的理解',
+    github: 'https://github.com/lyttonlee/wuziqi'
   }
 ]
 export const career = [
@@ -88,16 +95,16 @@ export const career = [
   },
   {
     time: '2013-2016',
-    text: '从事于矿业公司业务部门，主要是对矿山机械的采购、运行、维护等工作，期间开始接触互联网行业！'
+    text: '从事于矿业公司业务部门，主要是对矿山机械的采购、运行、维护等工作.自2014年起开始自学编程知识Html、JavaScript、CSS,并且使用WordPress框架为公司搭建了自己的站点'
   },
   {
-    time: '2017-至今',
-    text: '一直在学习互联网及编程知识，有过合伙创业的想法并付诸实践，终因经验不足及众多问题而停止'
+    time: '2017-2018',
+    text: '从事前端开发,主要使用Vue技术栈开发了电子商城网站,包括注册,商品列表,新闻,代理人员记录以及后台权限管理等模块,使用NodeJs开发了对应的服务端!'
   }
 ]
 export const contact = {
-  experience: '并无互联网行业实际工作经验，但写过多个Demo以及开发过自己喜欢的应用后对前后端分离、模块化、组件化、代码层次等的重要性有一定理解！',
-  evaluation: '高效的自学能力,具备独立分析解决问题能力强烈的自我驱动力,知识社区依耐者',
+  experiences: ['熟悉JavaScript,Html5,Css,Vue', '理解微信小程序,MpVue,NodeJs,Webpack,Git', '基本了解React,Electron,Ubuntu,TypeScript'],
+  evaluation: '高效的自学能力,具备独立分析解决问题能力强烈的自我驱动力,爱好知识社区',
   // hobby: [],
   email: 'lzr3278@163.com',
   tel: '15181589155',

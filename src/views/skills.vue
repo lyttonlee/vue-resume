@@ -29,12 +29,13 @@ export default {
     ...mapActions(['shuffleSkills'])
   },
   mounted () {
+    this.shuffleSkills()
     this.time = setInterval(() => {
       this.shuffleSkills()
     }, 5000)
   },
   beforeDestroy () {
-    console.log('clear')
+    // console.log('clear')
     clearInterval(this.time)
   }
 }
