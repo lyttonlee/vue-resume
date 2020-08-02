@@ -38,7 +38,7 @@ export default {
     height: 160px;
     border-radius: 50%;
     background-color: rgb(20, 73, 73);
-    box-shadow:  inset 11px 11px 22px #0f3838, 
+    box-shadow:  inset 11px 11px 22px #0f3838,
             inset -11px -11px 22px #195a5a;
     .img {
       margin: 20px 0;
@@ -59,7 +59,7 @@ export default {
       height: 80px;
       color: rgba(192, 200, 207, 0.822);
       background-color: rgb(20, 73, 73);
-      box-shadow:  5px 5px 10px #114040, 
+      box-shadow:  5px 5px 10px #114040,
              -5px -5px 10px #175252;
       .iconfont {
         height: 80px;

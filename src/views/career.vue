@@ -39,7 +39,7 @@ export default {
         padding: 10px 20px;
         color: #fff;
         background: #17522098;
-        box-shadow:  14px 14px 30px #135f1c, 
+        box-shadow:  14px 14px 30px #135f1c,
              -14px -14px 30px #d9dfda50;
         .text {
           color: rgb(189, 189, 189);

@@ -60,10 +60,10 @@ export default {
           // background: rgba(63, 59, 27, 0.363);
           border-radius: 20px;
           background: #49500a;
-          box-shadow:  15px 15px 30px #2f3306, 
+          box-shadow:  15px 15px 30px #2f3306,
                       -15px -15px 30px #636d0e;
           &:hover {
-            box-shadow: inset 15px 15px 30px #2f3306, 
+            box-shadow: inset 15px 15px 30px #2f3306,
                         inset -15px -15px 30px #636d0e;
           }
           .mu-card-header {
