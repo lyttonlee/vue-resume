@@ -1,28 +1,29 @@
-import avatar from '../assets/avatar.jpeg'
+// import avatar from '../assets/avatar.jpeg'
 export const info = {
   name: '李在荣',
-  avatar,
+  avatar: 'http://profile.huili.cool/202008012323392.jpg@avatar',
   introduce: '博学之,审问之,慎思之,明辨之,笃行之',
+  exp: '五年前端开发经验',
   status: [
     {
       icon: 'icon-icon-',
-      value: '四川'
+      value: '成都'
     },
     {
       icon: 'icon-xueli',
       value: '本科'
     },
-    {
-      icon: 'icon--jiehun',
-      value: '未婚'
-    },
+    // {
+    //   icon: 'icon--jiehun',
+    //   value: '未婚'
+    // },
     {
       icon: 'icon-zhiwei',
       value: '在职'
     }
   ]
 }
-export const skills = ['Vue', 'Vue-Router', 'Vuex', 'React', 'React-Native', 'NodeJs', 'JavaScript', 'MongoDB', 'Html5', 'Css3', 'Koa2', 'MpVue', 'Ubuntu', 'Webpack', 'electron', 'express', 'git']
+export const skills = ['Vue', 'Vue-Router', 'Vuex', 'React', 'NodeJs', 'JavaScript', 'MongoDB', 'Html5', 'Css3', 'Koa2', 'MpVue', 'Ubuntu', 'Webpack', 'electron', 'express', 'git', 'Nginx', 'Docker', 'shell', 'Java', 'SpringBoot', 'Python', 'gis', 'flutter']
 export const profiles = [
   {
     title: 'vue商城',
@@ -89,10 +90,10 @@ export const profiles = [
   }
 ]
 export const career = [
-  {
-    time: '2010-2013',
-    text: '从事工业产品设计，主要对产品的外形、拼装等的合理设计，对多种软件如PS、CAD、ProE等使用较多！'
-  },
+  // {
+  //   time: '2010-2013',
+  //   text: '从事工业产品设计，主要对产品的外形、拼装等的合理设计，对多种软件如PS、CAD、ProE等使用较多！'
+  // },
   {
     time: '2013-2015',
     text: '从事于矿业公司业务部门，主要是对矿山机械的采购、运行、维护等工作.自2014年起开始自学编程知识Html、JavaScript、CSS,并且使用WordPress框架为公司搭建了自己的站点'
