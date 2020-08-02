@@ -41,19 +41,18 @@ export default new Vuex.Store({
         const index = state.routes.findIndex(route => route.path === presentPath)
         // 获取当前路由的下一个路由路径
         let nextPagePath
-        if (index + 1 === state.routes.length) {
-          nextPagePath = state.routes[0].path
+        if (index === 0) {
+          const routesLength = state.routes.length
+          nextPagePath = state.routes[routesLength - 1].path
         } else {
-          nextPagePath = state.routes[index + 1].path
-          // console.log(router)
-          // router.push(nextPagePath)
+          nextPagePath = state.routes[index - 1].path
         }
         // console.log(nextPagePath)
         const animateDirection = {
           leave: 'fadeOutDown',
           enter: 'fadeInDown',
-          leaveTime: 1500,
-          enterTime: 1500
+          leaveTime: 750,
+          enterTime: 750
         }
         commit('changeAnimateDirection', animateDirection)
         // commit('nextPage', nextPagePath)
@@ -72,18 +71,19 @@ export default new Vuex.Store({
         const index = state.routes.findIndex(route => route.path === presentPath)
         // 获取当前路由的上一个路由路径
         let lastPagePath
-        if (index === 0) {
-          const routesLength = state.routes.length
-          lastPagePath = state.routes[routesLength - 1].path
+        if (index + 1 === state.routes.length) {
+          lastPagePath = state.routes[0].path
         } else {
-          lastPagePath = state.routes[index - 1].path
+          lastPagePath = state.routes[index + 1].path
+          // console.log(router)
+          // router.push(nextPagePath)
         }
         // console.log(lastPagePath)
         const animateDirection = {
           leave: 'fadeOutUp',
           enter: 'fadeInUp',
-          leaveTime: 1500,
-          enterTime: 1500
+          leaveTime: 750,
+          enterTime: 750
         }
         commit('changeAnimateDirection', animateDirection)
         // commit('lastPage', lastPagePath)
@@ -99,8 +99,8 @@ export default new Vuex.Store({
       const animateDirection = {
         leave: 'zoomOut',
         enter: 'zoomIn',
-        leaveTime: 1500,
-        enterTime: 1500
+        leaveTime: 750,
+        enterTime: 750
       }
       commit('changeAnimateDirection', animateDirection)
       commit('changeShowArrow')

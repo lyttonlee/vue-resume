@@ -46,6 +46,7 @@ export default {
 <style lang="less" scoped>
 .section {
   background-color: rgb(73, 80, 10) !important;
+  color: #000;
   .carousel {
     // height: auto;
     min-height: 50vh;
@@ -54,10 +55,17 @@ export default {
       justify-content: center;
       align-items: center;
       .box {
-        width: 85%;
+        width: 80%;
         .card {
-          background: rgba(126, 123, 94, 0.664);
-          border-radius: 10px;
+          // background: rgba(63, 59, 27, 0.363);
+          border-radius: 20px;
+          background: #49500a;
+          box-shadow:  15px 15px 30px #2f3306, 
+                      -15px -15px 30px #636d0e;
+          &:hover {
+            box-shadow: inset 15px 15px 30px #2f3306, 
+                        inset -15px -15px 30px #636d0e;
+          }
           .mu-card-header {
             padding-bottom: 0;
           }
@@ -72,7 +80,7 @@ export default {
             text-align: left;
           }
           .mu-card-sub-title {
-            color: rgb(34, 34, 34);
+            color: rgb(19, 19, 19);
             text-align: left;
           }
           .mu-card-text {
