@@ -48,38 +48,38 @@ export default {
       // 防止用户短时间内滚动多次，设置滚动间隔大于一秒才能生效
       // 判断滚动间隔时间
       let scrollDuration = event.timeStamp - this.lastScroll
-      // console.log(scrollDuration)
-      if (scrollDuration > 1000) {
+      console.log(scrollDuration)
+      if (scrollDuration > 3000) {
         // 将这一次的滚动时间记录为上一次合法的滚动时间
         this.lastScroll = event.timeStamp
         // console.log('合法的滚动')
         // 判断滚动方向进行操作
         if (event.deltaY > 0) {
           const presentPath = this.$route.path
-          this.next(presentPath).then(nextPagePath => {
+          this.last(presentPath).then(nextPagePath => {
             this.$router.push(nextPagePath)
           })
         } else {
           const presentPath = this.$route.path
-          this.last(presentPath).then(lastPagePath => {
+          this.next(presentPath).then(lastPagePath => {
             this.$router.push(lastPagePath)
           })
         }
       } else {
         // 如果滚动不合法就不做任何操作
-        console.log('请爱护你的鼠标不要连续滚动！')
+        // console.log('请爱护你的鼠标不要连续滚动！')
       }
     },
     swipedown () {
       // console.log('down')
       const presentPath = this.$route.path
-      this.next(presentPath).then(nextPagePath => {
+      this.last(presentPath).then(nextPagePath => {
         this.$router.push(nextPagePath)
       })
     },
     swipeup () {
       const presentPath = this.$route.path
-      this.last(presentPath).then(lastPagePath => {
+      this.next(presentPath).then(lastPagePath => {
         this.$router.push(lastPagePath)
       })
     }
