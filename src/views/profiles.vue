@@ -14,7 +14,7 @@
               <mu-card-text>
                 {{profile.text}}
               </mu-card-text>
-              <mu-card-actions><a :href="profile.github" target="_blank">
+              <mu-card-actions v-if="profile.github"><a :href="profile.github" target="_blank">
                   <mu-icon class="icon" value=":iconfont icon-GitHub"></mu-icon></a>
               </mu-card-actions>
             </mu-card>

@@ -23,11 +23,11 @@ export const info = {
     }
   ]
 }
-export const skills = ['Vue', 'Vue-Router', 'Vuex', 'React', 'NodeJs', 'JavaScript', 'MongoDB', 'Html5', 'Css3', 'Koa2', 'MpVue', 'Ubuntu', 'Webpack', 'electron', 'express', 'git', 'Nginx', 'Docker', 'shell', 'Java', 'SpringBoot', 'Python', 'gis', 'flutter']
+export const skills = ['Vue', 'Vue-Router', 'Vuex', 'React', 'NodeJs', 'JavaScript', 'MongoDB', 'Mysql', 'Html5', 'Css3', 'typeScript', 'Koa2', 'Docker', 'Ubuntu', 'Webpack', 'electron', 'express', 'git', 'Nginx', 'Gitlab', 'CI/CD', 'shell', 'Java', 'SpringBoot', 'Python', 'gis']
 export const profiles = [
   {
     title: 'vue商城',
-    subTitle: '一个简单的PC-WEB电商代理商城',
+    subTitle: 'PC-WEB电商代理商城',
     skills: 'vue vue-router vuex axios qiniu echart element-ui mavon-editor',
     text: '这个代理商城项目有完整的前后端页面，基本实现了商城的所有功能，用户登录注册，状态管理，商品分类展示搜索，用户购买、发货，后端页面也完全实现了网站整体设置，用户统计，购买统计，商品管理、用户管理、订单管理等的功能！',
     github: 'https://github.com/lyttonlee/learn'
@@ -59,27 +59,6 @@ export const profiles = [
     skills: 'vue element-ui',
     text: '这是一个用来模拟火焰纹章IF人物升级的小应用，功能实现也很简单就是遍历生成随机数与人物属性成长率相比较，最终得出每一个人物成长期望值。',
     github: 'https://github.com/lyttonlee/if'
-  },
-  {
-    title: 'vue-todos',
-    subTitle: '一个Todo List小应用',
-    skills: 'vue TypeScript vue-router vuex axios apiCloud vue-chartJs',
-    text: '诚实的讲这个todo和网上遍地的todo demo没什么区别，功能还是一样的功能，不过这算是自己尝试TypeScript的开始，也是不用UI框架的测试，也是自己学着造轮子的起点',
-    github: 'https://github.com/lyttonlee/vue-todo'
-  },
-  {
-    title: 'react-demo',
-    subTitle: '一个简单的react使用demo',
-    skills: 'react react-router redux antd-mobile',
-    text: '这是一个看了react文档，尝试如何使用react的小demo，包含简单的react使用方法，功能只有一个小的评论列表包含添加和删除，一个数字加减的简单运算',
-    github: 'https://github.com/lyttonlee/react-demo'
-  },
-  {
-    title: 'react-native-demo',
-    subTitle: '一个简单的react-native使用demo',
-    skills: 'react-native redux React-Navgation ',
-    text: '主要学会了使用react-native的基本组件，react-navigation的使用，对react-native的基本环境搭建及运行有了基础理解',
-    github: 'https://github.com/lyttonlee/react-demo'
   },
   {
     title: '原生JS实现五子棋',
